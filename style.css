@@ -6,77 +6,85 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background-color: #fff; /* Adjust the background color as needed */
+    color: #333; /* Main text color */
 }
 
 header {
-    background: #f8f8f8;
-    padding: 20px;
+    background-color: #f8f8f8; /* Header background */
+    padding: 1rem;
     text-align: center;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 2rem; /* Increase the size of the h1 */
 }
 
 #hamburger {
     cursor: pointer;
-    display: none; /* Hide the hamburger by default, can be shown in media queries for smaller screens */
+    font-size: 1.5rem; /* Increase the size of the hamburger menu */
 }
 
-#navMenu {
-    display: none; /* Assuming you want this hidden by default since it has a class 'hidden' */
+#navMenu.hidden {
+    display: none;
 }
 
 #portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .portfolio-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    padding: 15px;
+    background-color: #f9f9f9; /* Item background color */
+    border: 1px solid #e1e1e1; /* Border color */
+    padding: 1rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Hover effect */
+}
+
+.portfolio-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Links use body text color */
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    width: 100%; /* Ensure images take up the entire width */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.portfolio-item-content {
-    padding: 15px;
-}
-
-.portfolio-item h3 {
-    color: #333;
-    font-size: 20px;
-    margin: 10px 0;
+.portfolio-item h2 {
+    margin-top: 0.5rem;
+    font-size: 1.25rem; /* Size of the project title */
 }
 
 .portfolio-item p {
-    color: #666;
-    font-size: 16px;
+    margin-top: 0.5rem;
+    color: #666; /* Description text color */
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #333; /* Footer background */
+    color: #fff; /* Footer text color */
     text-align: center;
-    padding: 20px;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #portfolio {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout for mobile */
     }
 
-    #hamburger {
-        display: block; /* Show the hamburger menu on smaller screens */
+    header, footer {
+        text-align: left; /* Align left on mobile */
     }
 }
 
-/* Additional responsive styles and fine-tuning as necessary */
+/* Additional responsive styles as needed */
