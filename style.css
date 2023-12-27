@@ -1,73 +1,55 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #333; /* Dark background color */
-    color: white;
-}
+/* Previous styles... */
 
-.wrapper {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.container {
-    max-width: 800px; /* Adjust the width as necessary */
-    margin: auto;
-}
-
-header h1 {
-    font-size: 2.5em; /* Large header font size */
-    margin-bottom: 0.5em;
-}
-
-header p {
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #0066ff; /* Change as needed */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 2em; /* Space below button */
-}
-
+/* Hamburger menu */
 #hamburger {
-    display: none; /* Hidden by default, shown in smaller screens */
-    font-size: 2em; /* Hamburger icon size */
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
+    display: block;
+    font-size: 30px; /* Adjust size as needed */
 }
 
-nav {
-    display: none; /* Make the navigation hidden by default */
+/* Navigation menu */
+#navMenu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Position below the hamburger icon */
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
 }
 
-/* When active class is added via JavaScript, display the nav */
-nav.active {
+#navMenu a {
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #444; /* Optional: adds a line between links */
+}
+
+#navMenu a:last-child {
+    border-bottom: none;
+}
+
+/* Show the menu when .active is added to #navMenu */
+#navMenu.active {
     display: block;
 }
 
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
+/* Adjustments for mobile */
 @media screen and (max-width: 768px) {
-    #hamburger {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0; /* Stack the links vertically with space */
-    }
+    /* Styles for mobile, potentially stacking the menu items vertically */
+    /* ... */
 }
+
+/* Footer */
+footer {
+    /* Previous styles... */
+    position: relative; /* Changed from absolute to relative */
+}
+
+/* Other styles */
+/* ... */
