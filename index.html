@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bobby Uyammadu - Portfolio </title>
+    <title>Bobby Uyammadu - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Bobby Uyammadu - Portfolio</h1>
-            <nav>
+            <!-- Hamburger Icon -->
+            <div id="hamburger" onclick="toggleMenu()">☰</div>
+            <!-- Navigation Menu -->
+            <nav id="navMenu">
                 <a href="#">Home</a> |
                 <a href="#projects">Academic Projects</a> |
                 <a href="#internships">Internship Experience</a> |
@@ -25,32 +28,12 @@
     </header>
 
     <div class="container portfolio-items">
-        <!-- Portfolio Section: Each item is a clickable link to its page -->
-        <a href="academic_projects.html" class="item">
-            <div>Academic Projects</div>
-        </a>
-        <a href="internship_experience.html" class="item">
-            <div>Internship Experience</div>
-        </a>
-        <a href="personal_projects.html" class="item">
-            <div>Personal Projects</div>
-        </a>
-        <a href="certifications.html" class="item">
-            <div>Certifications</div>
-        </a>
-        <a href="skills.html" class="item">
-            <div>Skills</div>
-        </a>
-        <a href="awards_honors.html" class="item">
-            <div>Awards & Honors</div>
-        </a>
-        <a href="professional_affiliations.html" class="item">
-            <div>Professional Affiliations</div>
-        </a>
+        <!-- Portfolio items here -->
     </div>
 
     <footer>
         <p>Bobby Uyammadu &copy; 2023</p>
     </footer>
+    <script src="script.js"></script> <!-- Link to JavaScript File -->
 </body>
 </html>
