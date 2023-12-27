@@ -1,120 +1,103 @@
-/* Reset and base styles */
+/* Basic Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header styles */
+/* Layout Styles */
 header {
-    background: #333;
+    background-color: #333;
     color: white;
-    padding: 1em 0;
-    text-align: center;
+    padding: 1rem;
+    position: relative;
 }
 
 header h1 {
+    display: inline-block;
     margin: 0;
+    padding-left: 3rem; /* Adjust as needed to make room for hamburger menu */
 }
 
-nav ul {
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Hamburger Menu Styles */
+#hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    z-index: 1000; /* Above other elements */
+}
+
+#navMenu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 100%; /* Below the header */
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 999; /* Below the hamburger icon */
+}
+
+#navMenu ul {
     list-style-type: none;
-    display: flex;
-    justify-content: center;
+    padding: 0;
 }
 
-nav ul li {
-    padding: 0 1em;
-}
-
-nav ul li a {
+#navMenu ul li a {
+    display: block;
+    padding: 1rem;
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ccc;
+#navMenu ul li a:hover, #navMenu ul li a:focus {
+    background-color: #444;
 }
 
-/* Main styles */
-main {
-    padding: 2em 0;
-}
-
-section {
-    margin-bottom: 2em;
-}
-
-/* Portfolio styles */
-#portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
+/* Main Content Styles */
 .portfolio-item {
-    width: calc(33% - 20px);
-    margin-bottom: 30px;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
+    margin-bottom: 1rem;
 }
 
 .item-info {
-    padding: 0.5em;
     background: #f0f0f0;
+    padding: 0.5rem;
+    text-align: left;
 }
 
-/* Footer styles */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
-
-/* Media queries for responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
-    .portfolio-item {
-        width: calc(50% - 20px);
+    #navMenu {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    header h1 {
+        padding-left: 1.5rem; /* Adjust as needed for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .portfolio-item {
-        width: 100%;
+    #navMenu ul li a {
+        padding: 0.75rem;
     }
-
-    nav ul {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    nav ul li {
-        padding: 0.5em 0;
-    }
-
-    #hamburger {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        cursor: pointer;
-    }
-
-    .hidden {
-        display: none;
-    }
-}
-
-/* Hamburger menu styles */
-#hamburger {
-    display: none;
 }
