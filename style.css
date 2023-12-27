@@ -1,24 +1,30 @@
+/* Add this CSS to your style.css file */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
 header {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
 }
 
 #hamburger {
-    display: none; /* Initially hidden, can be displayed on smaller screens */
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 #navMenu.hidden {
@@ -26,22 +32,20 @@ header {
 }
 
 main {
-    padding: 20px;
-    background-color: #fff;
-    min-height: calc(100% - 40px); /* Adjust based on header/footer height */
+    padding: 2rem;
 }
 
 #portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
 }
 
 .portfolio-item {
-    width: calc(33.333% - 20px);
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -50,47 +54,34 @@ main {
 }
 
 .portfolio-item a {
-    color: black;
     text-decoration: none;
-    display: block;
-    padding: 15px;
+    color: inherit;
 }
 
 .portfolio-item img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-bottom: 1px solid #eee;
 }
 
-.portfolio-item h2 {
-    margin: 10px 0;
+.item-info h3 {
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
-.portfolio-item p {
-    color: #666;
+.item-info p {
+    color: #777;
+    margin-top: 0.5rem;
 }
 
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem 0;
 }
 
 @media (max-width: 768px) {
     #portfolio {
-        flex-direction: column;
-    }
-
-    .portfolio-item {
-        width: auto;
-    }
-
-    #hamburger {
-        display: block;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
