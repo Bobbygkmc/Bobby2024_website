@@ -1,4 +1,8 @@
 function toggleMenu() {
     var menu = document.getElementById('navMenu');
-    menu.classList.toggle('active');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+    }
 }
