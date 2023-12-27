@@ -1,87 +1,120 @@
-/* Add this CSS to your style.css file */
-
+/* Reset and base styles */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
 }
 
+/* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
+    background: #333;
+    color: white;
+    padding: 1em 0;
     text-align: center;
-    padding: 1rem 0;
 }
 
 header h1 {
-    font-size: 2rem;
+    margin: 0;
 }
 
-#hamburger {
-    cursor: pointer;
-    font-size: 1.5rem;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
-#navMenu.hidden {
-    display: none;
+nav ul li {
+    padding: 0 1em;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Main styles */
 main {
-    padding: 2rem;
+    padding: 2em 0;
 }
 
+section {
+    margin-bottom: 2em;
+}
+
+/* Portfolio styles */
 #portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .portfolio-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-
-.portfolio-item a {
-    text-decoration: none;
-    color: inherit;
+    width: calc(33% - 20px);
+    margin-bottom: 30px;
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
-.item-info h3 {
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.item-info {
+    padding: 0.5em;
+    background: #f0f0f0;
 }
 
-.item-info p {
-    color: #777;
-    margin-top: 0.5rem;
-}
-
+/* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1em 0;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-    #portfolio {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .portfolio-item {
+        width: calc(50% - 20px);
     }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    nav ul li {
+        padding: 0.5em 0;
+    }
+
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+/* Hamburger menu styles */
+#hamburger {
+    display: none;
 }
