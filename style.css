@@ -63,3 +63,31 @@ footer {
     text-align: center;
     margin-top: auto; /* Pushes the footer to the bottom of the viewport */
 }
+/* Existing styles... */
+
+/* Hamburger Menu and Responsive Navigation */
+#hamburger {
+    display: none; /* Hidden by default, shown in smaller screens */
+    font-size: 24px; /* Hamburger icon size */
+    cursor: pointer;
+}
+
+#navMenu {
+    /* Other styles for nav */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    #navMenu {
+        display: none; /* Hide menu by default, toggle on click */
+    }
+
+    /* Style for when menu is active */
+    #navMenu.active {
+        display: block; /* Show menu */
+    }
+}
