@@ -14,7 +14,57 @@
 #navMenu {
     display: none;
     position: absolute;
-    top: 60px; /* Position below the hamburger icon */
+    top: 60px; /* Position below the hamburger icon *//* Add your previous styles here */
+
+/* Hamburger Menu Styles */
+#hamburger {
+    display: block; /* Show the hamburger icon */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Navigation Menu Styles */
+#navMenu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%;
+    background: #333;
+    z-index: 1000;
+    padding-top: 3rem;
+}
+
+/* Individual Navigation Links */
+#navMenu a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+}
+
+/* Footer Styles */
+footer {
+    position: relative; /* Change as needed, if you want a sticky footer use 'absolute' */
+    width: 100%;
+    color: white;
+    background: #333;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive and additional styles here */
+@media screen and (max-width: 768px) {
+    /* Hamburger menu styles for mobile */
+    /* ... */
+}
+
     right: 20px;
     background-color: #333;
     padding: 10px;
