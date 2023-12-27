@@ -1,105 +1,63 @@
-/* Previous styles... */
-
-/* Hamburger menu */
-#hamburger {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    display: block;
-    font-size: 30px; /* Adjust size as needed */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Navigation menu */
-#navMenu {
-    display: none;
-    position: absolute;
-    top: 60px; /* Position below the hamburger icon *//* Add your previous styles here */
-
-/* Hamburger Menu Styles */
-#hamburger {
-    display: block; /* Show the hamburger icon */
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
+.nav-container {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
 }
 
-/* Navigation Menu Styles */
+#hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 #navMenu {
     display: none;
     position: fixed;
     right: 0;
     top: 0;
-    width: 250px; /* Width of the sidebar */
+    width: 50%; /* Width of the sidebar */
     height: 100%;
-    background: #333;
-    z-index: 1000;
-    padding-top: 3rem;
+    background: #444;
+    padding-top: 60px; /* Give some space for the menu items */
 }
 
-/* Individual Navigation Links */
 #navMenu a {
     display: block;
     color: white;
-    padding: 1rem;
+    padding: 10px;
     text-decoration: none;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #555;
 }
 
-/* Footer Styles */
+main section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #ddd; /* Visual separation of sections */
+}
+
+main h2 {
+    color: #333;
+}
+
 footer {
-    position: relative; /* Change as needed, if you want a sticky footer use 'absolute' */
-    width: 100%;
+    background: #222;
     color: white;
-    background: #333;
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px;
+    position: relative; /* Adjust based on your layout needs */
 }
 
 /* Responsive and additional styles here */
 @media screen and (max-width: 768px) {
-    /* Hamburger menu styles for mobile */
-    /* ... */
+    #navMenu {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
-
-    right: 20px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: left;
-}
-
-#navMenu a {
-    display: block;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-bottom: 1px solid #444; /* Optional: adds a line between links */
-}
-
-#navMenu a:last-child {
-    border-bottom: none;
-}
-
-/* Show the menu when .active is added to #navMenu */
-#navMenu.active {
-    display: block;
-}
-
-/* Adjustments for mobile */
-@media screen and (max-width: 768px) {
-    /* Styles for mobile, potentially stacking the menu items vertically */
-    /* ... */
-}
-
-/* Footer */
-footer {
-    /* Previous styles... */
-    position: relative; /* Changed from absolute to relative */
-}
-
-/* Other styles */
-/* ... */
